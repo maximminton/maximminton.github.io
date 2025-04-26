@@ -1,0 +1,18 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.page-wrapper{
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    background-color: lightgreen
+}
+
+.left-side{
+    width: 350px;
+    background-color: #3f6592;    
+}
