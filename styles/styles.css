@@ -107,7 +107,23 @@ margin-top: 40px;
   margin-top: 15px;
   font-size: 0.875rem;  
 }
-
+.projects{
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+button{
+    height: 40px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #3f6592;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
 
 /* ----------------End of main content----------------- */
 
