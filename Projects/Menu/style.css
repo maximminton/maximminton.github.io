@@ -58,7 +58,6 @@ body {
 
 .right-side {
     height: 100%;
-    flex-grow: 1;
 }
 
 .greitings {
@@ -78,7 +77,6 @@ body {
 }
 
 .menu-table div {
-    flex-grow: 1;
     width: 45%;
     height: 33%;
 
@@ -86,7 +84,6 @@ body {
 }
 
 .menu-item {
-
     text-align: center;
     position: relative;
     font-size: 1.5rem;
@@ -113,7 +110,6 @@ body {
 
 .menu-item p {
     margin: -5px;
-    padding: 0px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #d5d5d5;
