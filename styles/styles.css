@@ -1,18 +1,136 @@
-*{
+* {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
-.page-wrapper{
+
+
+body {
+    font-family: 'Arial', serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+img {
+    display: block;
+    max-width: 130%;
+    transform: translateX(-30px);
+}
+
+.page-wrapper {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
     display: flex;
-    background-color: lightgreen
 }
 
-.left-side{
-    width: 350px;
-    background-color: #3f6592;    
+.left-side {
+    max-width: 350px;
+    padding: 40px 0 0 30px;
+    background-color: #3f6592; 
+    color: #fff;   
 }
+
+figure {
+    width: 255px;
+    height: 255px;
+    margin: 0 auto;
+    transform: translateX(-15px);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.left-side__item {
+    margin-top: 40px;
+}
+
+.left-side__item-title { 
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-bottom: 2px solid #fff;
+    font-size: 1.5rem;
+}
+
+.left-side__item-content {
+    padding-top: 30px;
+}
+.left-side__item-content-row{
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.left-side__item-content-row span:first-child {
+    font-weight: bold;
+}
+.left-side__item-content-row span{
+    display: block;
+    
+}
+
+/* -----------------Main content----------------- */
+.right-side{
+    width     : 100%;
+    padding: 30px;
+}
+
+header.main-header h1{
+    font-size: 2.25rem;
+}
+
+
+.title{
+padding-bottom: 30px;
+}
+
+.title__main{
+    border-bottom: 2px solid #d5d5d5;
+}
+
+.title__section{
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.section{
+margin-top: 40px;
+}
+
+.section_row{
+    margin-top: 20px;
+}
+
+.section_row_subtitle{
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.section_row p{
+  margin-top: 15px;
+  font-size: 0.875rem;  
+}
+
+
+/* ----------------End of main content----------------- */
+
+
+/* ------Start of global styles------ */
+.bold {
+    font-weight: bold;
+}
+
+.mb-6{
+    margin-bottom: 6px;
+}
+address {
+    font-style: normal;
+}
+.custom-link{
+    text-decoration: none;
+    color: #fff;
+}
+.d-flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+/* ----------End of global styles------ */

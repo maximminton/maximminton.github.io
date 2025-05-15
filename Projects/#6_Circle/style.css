@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    margin: 20px;
+}
+.first_version {
+    margin: 50px auto;
+    padding: 18px;
+    width: 150px;
+    height: 150px;
+    border: 40px solid yellow;
+    border-radius: 50%;
+    outline: 40px solid blue
+}
+.second_version {
+  margin: 100px auto;
+  padding: 18px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* border: 10px solid yellow; */
+  box-shadow: 0 0 0 50px #F7FF0A,
+              0 0 0 100px #0D05FF;
+}

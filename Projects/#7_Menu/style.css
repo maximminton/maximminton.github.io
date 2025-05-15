@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(135deg, #202020 0%, #47372f 100%);
+
+}
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 940px;
+    height: 395px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.left-side {
+    flex-shrink: 0;
+    position: relative;
+    width: 330px;
+    background-image: url(https://images.mrcook.app/recipe-image/018d1c9c-656c-7016-8b15-9714c1de8594?cacheKey=U3VuLCAxMiBKYW4gMjAyNSAwMzozODoyNCBHTVQ=);
+    background-size: cover;
+    background-position: center;
+}
+
+.message {
+    position: absolute;
+    top: 160px;
+    left: -10px;
+    width: 335px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.slogan {
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+.offer {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin-top: -30px;
+    
+}
+
+.message p span {
+    color: yellow;
+    font-weight: bold;
+}
+
+.right-side {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.greitings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    font-size: 1.5rem;
+}
+
+.menu-table {
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+.menu-table div {
+    flex-grow: 1;
+    width: 45%;
+    height: 33%;
+
+
+}
+
+.menu-item {
+
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+
+}
+
+.menu-item::before,
+.menu-item::after {
+    content: '';
+    position: absolute;
+    top: 80%;
+    width: 50%;
+    border-top: 3px solid #d5d5d5;
+
+}
+
+.menu-item::before {
+    left: 20%;
+}
+
+.menu-item::after {
+    right: 20%;
+}
+
+.menu-item p {
+    margin: -5px;
+    padding: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d5d5d5;
+}
+
+.pseudo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #d5d5d5;
+    height: 60%;
+
+
+}

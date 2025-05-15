@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  max-width: 1000px;
+  height: 50px;
+}
+
+.line {
+  width: 800px;
+  margin: 15px auto;
+  border: 2px solid;
+}
+
+.text {
+  width: 53px;
+  height: 22px;
+  margin: -30px auto;
+  background-color: white;
+  border: 4px solid white;
+}
+
+.version-2 {
+  text-align: center;
+  position: relative;
+}
+
+.version-2::before,
+.version-2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 37%;
+  border-top: 3px solid black;
+}
+
+.version-2::before {
+  left: 10%;
+}
+
+.version-2::after {
+  right: 10%;
+}
