@@ -6,41 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <title>Cloudbudget</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/styles/styles.css">
-
 </head>
 
 <body>
-    <div class="header-section bg-cover">
-
-        <header class="main-header">
+    <div class="header-section d-flex bg-cover">
+        <header class="main-header d-flex">
             <nav>
-                <div class="content-wrap">
-
-                    <div class="logo d-flex">
-                        <div class="logo-img">
+                <div class="content-wrap d-flex vertical-align">
+                    <div class="logo d-flex vertical-align">
+                        <div class="logo-img d-flex vertical-align">
                             <img src="/assets/img/logo.svg" alt="Cloudbudget Logo">
                         </div>
                         <div class="logo-title">
                             Сloudbudget
                         </div>
                     </div>
-                
-                    <ul class="ulheadermenu">
-                        <li><a href="/index.html">Features</a></li>
-                        <li><a href="/about.html">Technology</a></li>
-                        <li><a href="/services.html">Contacts</a></li>
-                        <li><a href="/contact.html">Sign Up</a></li>
-                    </ul>
-                    <a href="#" class="btn btn__transparent">
+                    <div class="menu-container">
+                        <div id="iconsContainer" class="burger-icons">
+                            <i id="iconOpen" class="fa-solid fa-bars"></i>
+                            <i id="iconClose" class="fa-solid fa-xmark hide"></i>
+                        </div>
+                        <ul id="headerMenu" class="header-menu header-menu-hide d-flex items-center">
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn__transparent hide-mobile">
                         login
+                    </a>
+                    <a href="#" class="mobile-icon hide-desktop">
+                        <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </div>
             </nav>
         </header>
-
+        <!-- ---------------Header Section Content----------------- -->
+        <div class="header-section-content">
+            <header class="title">
+                <div class="content-wrap">    
+                    <h1>
+                        Cloudbudget
+                    </h1>
+                </div>
+            </header>
+            <div class="content-wrap">
+                <p class="subtitle">
+                    Cloud budget management for everyone. Only <br>€69.95 a Month After a 7 Day Trial of <br> Up to €4.99
+                </p>
+            </div>
+            <a href="#" class="btn btn-fill btn-fill-white self-center">
+                Sign Up
+            </a>
+         </div>
     </div>
+    
+<main class="main-content">
+    <section class="media-section">
+        <div class="media-section-item">
+            <div class="content-wrap">
+                <h2 class="section-title">
+                    Easy to Use Cloud Budget Management Software
+                </h2>
+                <p class="section-content">
+                    Our software is made so you can access and manage your budget and expenses online at any time from any device. It provides detailed income and expense reports with graphs so you can easilly see your spending patterns and budget at a glance. Read below to find out more.
+                </p>
+                <a href="#" class="link">
+                    Learn More
+                </a>
+            </div>
+        </div>
+        <div class="media-section-item">
 
+        </div>
+
+    </section>
+</main>
 
 
 
