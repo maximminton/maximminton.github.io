@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.battle-field {
+    display: grid;
+    grid-gap: 1.5vw;
+    min-height: 100vh;
+    padding: 1.5vw;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.battle-field {
+    grid-template-columns: repeat(25, 16px);
+    grid-template-rows: repeat(25, 16px);
+}
