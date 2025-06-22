@@ -18,7 +18,7 @@ body {
 
 img {
     max-width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .object-center {
@@ -42,13 +42,19 @@ img {
     display: flex;
     flex-direction: row;
 }
+.content-wrap-p{
+    padding: 0 15px
+}
+.content-wrap-m{
+    margin: 0 15px;
+}
 
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 810px;
+    min-height: 810px;
     background-color: #5F93C0;
     color: white;
     overflow-x: hidden;
@@ -99,7 +105,7 @@ img {
 .header-message {
     width: 100%;
     max-width: 520px;
-    height: 350px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +114,7 @@ img {
 .header-message h1,
 .automated-booking h2 {
     width: 100%;
-    height: 100px;
+    /* min-height: 100px; */
     font-size: 38px;
     font-weight: 500;
     line-height: 48px;
@@ -191,7 +197,7 @@ img {
 
 .tiles-section-wrap {
     max-width: 1440px;
-    max-height: 1566px;
+    /* max-height: 1580px; */
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -205,9 +211,10 @@ img {
 .tiles-content-wrap {
     width: 100%;
     max-width: 928px;
-    height: 1436px;
+    /* min-height: 1436px; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -228,18 +235,17 @@ img {
 
 .tile-text-landscape {
     max-width: 464px;
-    height: 386px;
-    padding: 64px;
+    /* height: 386px; */
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
 .tile-text-book {
     max-width: 454px;
-    height: 277px;
-    padding: 64px;
+    min-height: 277px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,7 +276,7 @@ img {
 
 .book {
     max-width: 454px;
-    height: 602px;
+    max-height: 670px;
 }
 
 
@@ -283,7 +289,8 @@ img {
 
 .tile-img {
     max-width: 463px;
-    height: 100%;
+    /* height: 100%; */
+    padding: 32px;
     border-radius: 22px;
 }
 
@@ -294,43 +301,44 @@ img {
 
 .automated-booking {
     max-width: 928px;
-    height: 1032px;
+    max-height: 1032px;
     color: #000000
 }
 
 .automated-booking h2 {
-    width: 527px;
-    height: 120px;
+    max-width: 527px;
+    min-height: 120px;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .automated-booking p {
-    width: 527px;
-    height: 77px;
-    padding-top: 118px;
+    max-width: 527px;
+    /* max-height: 77px; */
+    padding-top: 11px;
     margin: 0 auto;
     text-align: center;
 }
 
 figure {
-    width: 718px;
-    height: 552px;
+    max-width: 718px;
+    max-height: 552px;
     border-radius: 22px;
-    margin: 17% auto;
+    margin: 42px auto;
 }
 
 .row-feature {
     width: 100%;
     max-width: 1281px;
-    height: 140px;
-    margin-top: 80px;
-    margin-left: 125px;
+    /* height: 140px; */
+    margin-top: 40px;
+    /* margin-left: 6px; */
+    flex-wrap: wrap;
 }
 
 .row-feature h2 {
-    width: 580px;
-    height: 130px;
+    max-width: 580px;
+    /* height: 130px; */
     padding-right: 190px;
     font-size: 38px;
     font-weight: 500;
@@ -340,8 +348,9 @@ figure {
 }
 
 .row-feature p {
-    width: 489px;
-    height: 55px;
+    max-width: 489px;
+    /* height: 55px; */
+    padding-top: 11px;
     font: 'Avenir Next', sans-serif;
     font-weight: 400;
     line-height: 26px;
@@ -417,7 +426,7 @@ figure {
     min-height: 428px;
     flex-wrap: wrap;
     column-gap: 35px;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 64px;
     font: 'Avenir Next', sans-serif;
 }
@@ -449,6 +458,7 @@ figure {
     width: 100%;
     max-width: 1360px;
     min-height: 368px;
+    padding-bottom: 20px;
     background-color: #E0EBF4 ;
     border-radius: 22px;
 }
@@ -470,12 +480,14 @@ figure {
     max-width: 1320px;
     min-height: 164px;
     margin-top: 96px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     padding-right: 58px;
     padding-left: 58px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 
@@ -529,15 +541,16 @@ figure {
     min-height: 744px;
     margin-top: 40px;
     border-radius: 22px;
-    justify-content:space-between;
+    justify-content:center;
     background-color: #283849;
+    flex-wrap: wrap;
 }
 .support-content{
     width: 100%;
     max-width: 420px;
     min-height: 550px;
-    margin-top: 98px;
-    margin-left: 128px;
+    margin-top: 49px;
+    margin-left: 28px;
 }
 
 .support-content h2{
@@ -569,26 +582,28 @@ figure {
 .support-img img{
     width: 100%;
     max-width: 558px;
-    height: 664px;
+    max-height: 664px;
     margin-right: 40px;
     margin-top: 40px;
+    margin-bottom: 20px;
     border-radius: 22px;
 }
 
-footer {
-    position: relative;
+.footer {
+    /* position: relative; */
     width: 100%;
     max-width: 1360px;
     min-height: 274px;
     margin-top: 60px;
     color: #000;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .language{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     max-width: 168px;
     height: 273px;
@@ -670,20 +685,24 @@ footer {
     width: 100%;
     max-width: 168px;
     height: 273px;
-    margin-top: 100%;
+    /* margin-top: 100%; */
 }
 .footer-content{
-    width: 100%;
+    /* width: 100%; */
     max-width: 580px;
     height: 273px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-column{
+    width: 200px;
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 .footer-column h3{
     font-size: 1rem;
@@ -707,3 +726,105 @@ footer {
 }
 
 /* -------Mobile View-------------- */
+.@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+    .header-menu {
+        width: calc(100% - 40px);
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .header-message h1,
+    .automated-booking h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .header-message p {
+        font-size: 0.875rem;
+        line-height: 22px;
+    }
+
+    .carousel img {
+        width: calc(100% - 40px);
+    }
+
+    .tiles-section-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tile-text-landscape,
+    .tile-text-book {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .tile-img img {
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 971px){
+
+
+
+
+
+
+
+}
+
+
+
+@media all and (min-width: 1440px) {
+
+.tile-text-landscape {
+    min-height: 386px;
+    padding: 64px;}
+
+.tile-img {
+    /* height: 100%; */
+}
+.tile-text-book {
+    
+    padding: 64px;
+}
+.automated-booking h2 {
+    padding-top: 200px;
+}
+.automated-booking p {
+    max-height: 77px;
+    padding-top: 23px;
+}
+figure {
+    margin: 84px auto;
+}
+.row-feature {
+    height: 140px;
+    margin-top: 80px;
+    margin-left: 125px;
+}
+.row-feature p {
+    padding-top: 1px;
+}
+.third-party-apps-icons{
+    /* width: 100%;
+    max-width: 1320px;
+    min-height: 164px;
+    margin-top: 96px; */
+    margin-left: 20px;
+    /* padding-right: 58px;
+    padding-left: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; */
+
+}
+
+}
