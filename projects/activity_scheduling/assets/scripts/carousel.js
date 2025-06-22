@@ -76,3 +76,41 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const languageButton = document.getElementById('languageButton');
+  const languageDropdown = document.getElementById('languageDropdown');
+  const currentLanguageSpan = document.getElementById('currentLanguage');
+
+  // Функція для перемикання видимості випадаючого списку
+  function toggleDropdown() {
+    languageDropdown.classList.toggle('show');
+    languageButton.classList.toggle('active'); // Додаємо/видаляємо клас для повороту шеврона
+  }
+
+  // Обробник кліку на кнопку
+  languageButton.addEventListener('click', function(event) {
+    event.stopPropagation(); // Запобігаємо закриттю списку при кліку на саму кнопку
+    toggleDropdown();
+  });
+
+  // Обробник кліку на елементи списку
+  languageDropdown.querySelectorAll('a').forEach(item => {
+    item.addEventListener('click', function(event) {
+      event.preventDefault(); // Запобігаємо переходу за посиланням
+      const selectedLanguage = this.dataset.lang; // Отримуємо назву мови з data-lang
+      currentLanguageSpan.textContent = selectedLanguage; // Змінюємо текст на кнопці
+      toggleDropdown(); // Закриваємо список
+    });
+  });
+
+  // Обробник кліку поза межами списку для його закриття
+  document.addEventListener('click', function(event) {
+    if (!languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+      if (languageDropdown.classList.contains('show')) {
+        toggleDropdown();
+      }
+    }
+  });
+});
