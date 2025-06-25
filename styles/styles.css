@@ -108,7 +108,7 @@ margin-top: 40px;
   font-size: 0.875rem;  
 }
 .projects{
-    height: 300px;
+    /* height: 300px; */
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -117,7 +117,7 @@ margin-top: 40px;
 }
 button{
     height: 40px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-decoration: none;
     background-color: #3f6592;
     border-radius: 5px;
