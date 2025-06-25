@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let index = 0;
     const totalItems = items.length;
-    const itemWidth = items[0].offsetWidth + 20; // 350px + 20px (gap)
+    const itemWidth = items[0].offsetWidth + 20; // 320px + 20px (gap)
     let maxIndex = Math.max(0, Math.ceil((totalItems * itemWidth - carouselContainer.offsetWidth) / itemWidth));
 
     function updateCarousel() {

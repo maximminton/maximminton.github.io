@@ -43,10 +43,8 @@ img {
     flex-direction: row;
 }
 .content-wrap-p{
-    padding: 0 15px
-}
-.content-wrap-m{
-    margin: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .header {
@@ -153,8 +151,7 @@ img {
 }
 
 .carousel img {
-    width: calc(1440px / 3.5);
-    max-width: 1440px;
+    width: 320px;
     height: auto;
     max-height: 244px;
     pointer-events: none;
@@ -197,7 +194,6 @@ img {
 
 .tiles-section-wrap {
     max-width: 1440px;
-    /* max-height: 1580px; */
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -211,7 +207,6 @@ img {
 .tiles-content-wrap {
     width: 100%;
     max-width: 928px;
-    /* min-height: 1436px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -269,7 +264,7 @@ img {
 }
 
 .landscape {
-    width: 100%;
+    width: 454px;
     height: auto;
     min-height: 386px;
 }
@@ -337,9 +332,9 @@ figure {
 }
 
 .row-feature h2 {
-    max-width: 580px;
+    max-width: 480px;
     /* height: 130px; */
-    padding-right: 190px;
+    padding-right: 50px;
     font-size: 38px;
     font-weight: 500;
     line-height: 48px;
@@ -348,7 +343,7 @@ figure {
 }
 
 .row-feature p {
-    max-width: 489px;
+    max-width: 389px;
     /* height: 55px; */
     padding-top: 11px;
     font: 'Avenir Next', sans-serif;
@@ -383,8 +378,8 @@ figure {
     gap: 20px;
 }
 
-.custom-carousel-item {
-    min-width: 350px;
+.custom-carousel-item img{
+    min-width: 320px;
     height: 240px;
 }
 
@@ -467,8 +462,9 @@ figure {
     max-width: 1320px;
     height: 22px;
     text-align: center;
-    padding-top: 64px;
-    padding-left: 20px;
+    padding-top: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 22px;
@@ -480,9 +476,6 @@ figure {
     max-width: 1320px;
     min-height: 164px;
     margin-top: 96px;
-    /* margin-left: 20px; */
-    padding-right: 58px;
-    padding-left: 58px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -534,23 +527,27 @@ figure {
     width: 135px;
     height: 47px;
 }
-
 .support{
     width: 100%;
-    max-width: 1360px;
+    max-width: 464px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.support-container{
+    width: 100%;
     min-height: 744px;
     margin-top: 40px;
     border-radius: 22px;
-    justify-content:center;
+    padding: 15px;
+    justify-content: center;
     background-color: #283849;
     flex-wrap: wrap;
 }
 .support-content{
-    width: 100%;
     max-width: 420px;
     min-height: 550px;
-    margin-top: 49px;
-    margin-left: 28px;
+    margin-top: 50px;
 }
 
 .support-content h2{
@@ -726,50 +723,61 @@ figure {
 }
 
 /* -------Mobile View-------------- */
-.@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-
-    .header-menu {
-        width: calc(100% - 40px);
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .header-message h1,
-    .automated-booking h2 {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .header-message p {
-        font-size: 0.875rem;
-        line-height: 22px;
-    }
-
-    .carousel img {
-        width: calc(100% - 40px);
-    }
-
-    .tiles-section-wrap {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tile-text-landscape,
-    .tile-text-book {
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .tile-img img {
-        width: 100%;
-    }
+@media all and (min-width: 600px) {
+.carousel img {
+    width: calc(1440px / 4);
+    height: auto;
+    max-height: 244px;
+    pointer-events: none;
 }
 
-@media all and (min-width: 971px){
+.third-party-apps-icons{
+    padding-right: 58px;
+    padding-left: 58px;
+}
+.third-party-apps-text{
+    
+    padding-top: 64px;
+    padding-left: 20px;
+    
 
+}
+
+
+
+}
+
+@media all and (min-width: 768px){
+
+
+
+
+
+
+
+}
+
+@media all and (min-width: 959px){
+
+.landscape {
+    width: 100%;
+    height: auto;
+    min-height: 386px;
+}
+.support{
+    max-width: 1362px;
+}
+
+
+
+
+
+}
+
+@media all and (min-width: 1280px){
+.support-container{
+    justify-content: space-between;
+}
 
 
 
@@ -811,20 +819,19 @@ figure {
 .row-feature p {
     padding-top: 1px;
 }
-.third-party-apps-icons{
-    /* width: 100%;
-    max-width: 1320px;
-    min-height: 164px;
-    margin-top: 96px; */
-    margin-left: 20px;
-    /* padding-right: 58px;
-    padding-left: 58px;
+.row-feature h2 {
+    max-width: 580px;
+    /* height: 130px; */
+    padding-right: 190px;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 48px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px; */
-
+    align-items: flex-end;
 }
+.third-party-apps-icons{
+    /* margin-left: 20px; */
+}
+
 
 }
