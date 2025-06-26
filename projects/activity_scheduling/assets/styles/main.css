@@ -41,7 +41,11 @@ img {
     display: flex;
     flex-direction: row;
 }
-
+.hide-item,
+.hide-img,
+.hide-btn {
+    display: none;
+}
 .content-wrap-p {
     padding-left: 15px;
     padding-right: 15px;
@@ -62,11 +66,13 @@ img {
     width: calc(100% - 80px);
     height: 80px;
     background-color: #fff;
+    color: #000;
     margin: 40px;
     padding: 40px;
     border-radius: 22px;
     display: flex;
     align-items: center;
+    justify-content:space-around;
 }
 
 .header-menu a:first-child {
@@ -79,10 +85,10 @@ img {
 }
 
 .header-menu-item {
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 19px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     color: #000000;
     text-decoration: none;
     white-space: nowrap;
@@ -768,6 +774,30 @@ figure {
         margin-right: 38px;
         margin-bottom: 60px;
     }
+    .hide-img{
+        display: flex;
+    }
+   
+}
+@media all and (min-width: 764px) {
+
+    .hide-item,
+    .hide-btn {
+        display: flex;
+    }
+    .hide-desktop {
+        display: none;
+    }
+    .header-menu-item {
+    font-size: 0.835rem;
+    font-weight: 400;
+    line-height: 19px;
+    /* margin-right: 40px; */
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
 }
 
 @media all and (min-width: 959px) {
@@ -786,6 +816,7 @@ figure {
         margin-top: 40px;
         margin-bottom: 20px;
     }
+   
 }
 
 @media all and (min-width: 1024px) {
