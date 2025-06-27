@@ -20,32 +20,25 @@ img {
     max-width: 100%;
 }
 
-.object-center {
+.object-center, .d-flex-column, .d-flex-row, .d-flex {
     display: flex;
+}
+.object-center, .d-flex-column {
     flex-direction: column;
+}
+.d-flex-row {
+    flex-direction: row;
+}
+.object-center {
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.d-flex {
-    display: flex;
-}
-
-.d-flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.d-flex-row {
-    display: flex;
-    flex-direction: row;
-}
-.hide-item,
-.hide-img,
-.hide-btn {
+.hide-item, .hide-img, .hide-btn {
     display: none;
 }
+
 .content-wrap-p {
     padding-left: 15px;
     padding-right: 15px;
@@ -65,7 +58,6 @@ img {
 .header-menu {
     width: calc(100% - 80px);
     height: 80px;
-    background-color: #fff;
     color: #000;
     margin: 40px;
     padding: 40px;
@@ -75,24 +67,20 @@ img {
     justify-content:space-around;
 }
 
-.header-menu a:first-child {
+.header-menu-img {
     width: 100%;
     height: 26px;
-    display: flex;
     align-items: center;
     color: #1E1E1E;
-
 }
 
 .header-menu-item {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 19px;
-    /* margin-right: 40px; */
-    color: #000000;
+    color: #fff;
     text-decoration: none;
     white-space: nowrap;
-
 }
 
 .btn {
@@ -103,7 +91,6 @@ img {
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
-
 }
 
 .header-message {
@@ -118,7 +105,6 @@ img {
 .header-message h1,
 .automated-booking h2 {
     width: 100%;
-    /* min-height: 100px; */
     font-size: 38px;
     font-weight: 500;
     line-height: 48px;
@@ -130,8 +116,7 @@ img {
     font-size: 1rem;
     font-weight: 400;
     line-height: 26px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     text-align: center;
 }
 
@@ -185,7 +170,6 @@ img {
 
 .play-btn i {
     font-size: 0.5rem;
-
 }
 
 .play-btn-wrap a {
@@ -196,7 +180,6 @@ img {
 .play-btn-wrap :hover {
     cursor: pointer;
 }
-
 
 .tiles-section-wrap {
     max-width: 1440px;
@@ -223,32 +206,25 @@ img {
     flex-wrap: wrap;
 }
 
-.tiles-text {
-    max-width: 403px;
-    padding: 64px;
+.tiles-text, .tile-text-landscape, .tile-text-book {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+.tiles-text {
+    max-width: 403px;
+    padding: 64px;
+}
 .tile-text-landscape {
     max-width: 464px;
     padding: 32px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
-
-
 .tile-text-book {
     max-width: 454px;
     min-height: 277px;
     padding: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .tile-text-landscape p,
@@ -278,7 +254,6 @@ img {
     max-height: 670px;
 }
 
-
 .tiles-text h2 {
     font-size: 1.5rem;
     line-height: 24px;
@@ -294,13 +269,12 @@ img {
 
 .tile-img img {
     border-radius: 22px;
-
 }
 
 .automated-booking {
     max-width: 928px;
     max-height: 1032px;
-    color: #000000
+    color: #000000;
 }
 
 .automated-booking h2 {
@@ -353,12 +327,7 @@ figure {
     align-items: end;
 }
 
-
-
-
-
 /* -----------/ Second Carousel Styles /-------- */
-
 .custom-carousel {
     position: relative;
     width: 100vw;
@@ -411,8 +380,6 @@ figure {
     color: #000000;
     padding-left: 10px;
 }
-
-
 /* -----------/ End of Second Carousel Styles /-------- */
 
 .table-feature {
@@ -439,29 +406,24 @@ figure {
     color: #1E1E1E;
 }
 
-.table-feature-item p {
+.table-feature-item p, .table-feature-item span {
     font-size: 1rem;
     font-weight: 400;
     line-height: 22px;
+}
+.table-feature-item p {
     padding-top: 26px;
     padding-right: 28px;
 }
-
 .table-feature-item span {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 22px;
     color: #6F6F6F;
 }
 
-.third-party-apps-wrapper {
+.third-party-apps-wrapper, .third-party-apps {
     width: 100%;
     max-width: 1360px;
 }
-
 .third-party-apps {
-    width: 100%;
-    max-width: 1360px;
     min-height: 368px;
     padding-bottom: 20px;
     background-color: #E0EBF4;
@@ -469,22 +431,17 @@ figure {
 }
 
 .third-party-apps-text {
-    width: 100%;
     max-width: 1320px;
     height: 22px;
     text-align: center;
-    padding-top: 32px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 32px 10px 0 10px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 22px;
     font: var(--maint-font);
-
 }
 
 .third-party-apps-icons {
-    width: 100%;
     max-width: 1320px;
     min-height: 164px;
     margin-top: 96px;
@@ -495,7 +452,6 @@ figure {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-
 }
 
 .icons-item {
@@ -506,57 +462,22 @@ figure {
     align-items: center;
 }
 
-.stripe {
-    background-color: #635BFF;
-}
-
-.stripe img {
-    width: 105px;
-    height: 45px;
-}
-
-.square {
-    background-color: #C9E8F5;
-}
-
-.square img {
-    width: 142px;
-    height: 36px;
-}
-
-.zapier {
-    background-color: #201515;
-}
-
-.zapier img {
-    width: 138px;
-    height: 43px;
-}
-
-.paypal {
-    background-color: #FFD140;
-}
-
-.paypal img {
-    width: 136px;
-    height: 38px;
-}
-
-.ga {
-    background-color: #FFFFFF;
-}
-
-.ga img {
-    width: 135px;
-    height: 47px;
-}
+.stripe { background-color: #635BFF; }
+.stripe img { width: 105px; height: 45px; }
+.square { background-color: #C9E8F5; }
+.square img { width: 142px; height: 36px; }
+.zapier { background-color: #201515; }
+.zapier img { width: 138px; height: 43px; }
+.paypal { background-color: #FFD140; }
+.paypal img { width: 136px; height: 38px; }
+.ga { background-color: #FFFFFF; }
+.ga img { width: 135px; height: 47px; }
 
 .support {
     width: 100%;
     max-width: 464px;
     justify-content: center;
     align-items: center;
-
 }
 
 .support-container {
@@ -585,14 +506,11 @@ figure {
     font-size: 1rem;
     font-weight: 400;
     line-height: 26px;
-    margin-top: 13px;
-    margin-right: 24px;
-    margin-bottom: 30px;
+    margin: 13px 24px 30px 0;
     color: #FFFFFF;
 }
 
 .support-content a {
-    width: 100%;
     max-width: 126px;
     min-height: 50px;
     color: #FFFFFF;
@@ -605,8 +523,7 @@ figure {
     width: 100%;
     max-width: 470px;
     max-height: 664px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px 0 10px 0;
     border-radius: 22px;
 }
 
@@ -627,12 +544,9 @@ figure {
     width: 100%;
     max-width: 168px;
     height: 273px;
-    top: 0px;
-    left: 15px;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 19px;
-
 }
 
 .dropdown {
@@ -643,7 +557,6 @@ figure {
 .dropbtn {
     background-color: #283849;
     color: white;
-    padding: 0;
     font-size: 18px;
     border: none;
     cursor: pointer;
@@ -655,6 +568,7 @@ figure {
     padding-left: 24px;
     position: relative;
     user-select: none;
+    padding: 0 0 0 24px;
 }
 
 .dropbtn:hover,
@@ -666,13 +580,12 @@ figure {
     position: absolute;
     right: 16px;
     font-weight: bolder;
-    top: calc(50%);
+    top: 50%;
     transform: translateY(-50%) rotate(180deg);
     font-size: 18px;
 }
 
 .dropbtn.active .chevron {
-    top: calc(50%);
     transform: translateY(-50%) rotate(0deg);
 }
 
@@ -705,15 +618,11 @@ figure {
 }
 
 .language img {
-    width: 100%;
     max-width: 168px;
     height: 273px;
-    /* margin-top: 100%; */
 }
 
 .footer-content {
-    /* width: 100%; */
-    /* max-width: 1360px; */
     height: 273px;
     display: flex;
     flex-direction: row;
@@ -722,7 +631,7 @@ figure {
 }
 
 .footer-column {
-    /* width: 200px; */
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -757,19 +666,15 @@ figure {
         max-height: 244px;
         pointer-events: none;
     }
-
     .landscape {
         width: 454px;
     }
-
     .support-content {
         min-height: 550px;
         margin-top: 50px;
         padding: 0 20px;
     }
-
     .support-content p {
-
         margin-top: 23px;
         margin-right: 38px;
         margin-bottom: 60px;
@@ -777,118 +682,94 @@ figure {
     .hide-img{
         display: flex;
     }
-   
 }
 @media all and (min-width: 764px) {
-
-    .hide-item,
-    .hide-btn {
+    .hide-item, .hide-btn {
         display: flex;
     }
     .hide-desktop {
         display: none;
     }
     .header-menu-item {
-    font-size: 0.835rem;
-    font-weight: 400;
-    line-height: 19px;
-    /* margin-right: 40px; */
-    color: #000000;
-    text-decoration: none;
-    white-space: nowrap;
-
+        font-size: 0.835rem;
+        font-weight: 400;
+        line-height: 19px;
+        color: #000000;
+        text-decoration: none;
+        white-space: nowrap;
+        margin-right: 40px;
+    }
+    .header-menu {
+        justify-content:center;
+        background-color: #fff;
+    }
 }
-}
-
 @media all and (min-width: 959px) {
-
     .landscape {
         width: 100%;
         height: auto;
         min-height: 386px;
     }
-
     .support {
         max-width: 1362px;
     }
-
     .support-img img {
         margin-top: 40px;
         margin-bottom: 20px;
     }
-   
 }
-
 @media all and (min-width: 1024px) {
-
     .support-img img {
         margin-right: 40px;
     }
-
     .footer {
         justify-content: space-between;
         flex-wrap: nowrap;
         flex-direction: row;
     }
-
     .footer-content {
         width: 100%;
         max-width: 1162px;
     }
 }
-
 @media all and (min-width: 1280px) {
     .support-container {
         padding-left: 129px;
         justify-content: space-between;
     }
-
     .landscape {
         max-width: 1441px;
-
     }
-
     .support-img img {
         margin-right: 40px;
     }
-
 }
-
-
 @media all and (min-width: 1440px) {
-
     .tile-text-landscape {
         min-height: 386px;
         padding: 64px;
     }
-
     .tile-text-book {
         padding: 64px;
     }
-
     .automated-booking h2 {
         padding-top: 200px;
     }
-
     .automated-booking p {
         max-height: 77px;
         padding-top: 23px;
     }
-
     figure {
         margin: 84px auto;
     }
-
     .row-feature {
         height: 140px;
         margin-top: 80px;
         margin-left: 125px;
     }
-
     .row-feature p {
         padding-top: 1px;
     }
-
     .row-feature h2 {
         max-width: 580px;
         padding-right: 190px;
