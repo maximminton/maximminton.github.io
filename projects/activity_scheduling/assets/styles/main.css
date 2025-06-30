@@ -402,6 +402,7 @@ figure {
     width: 244px;
     height: 165px;
     margin-bottom: 20px;
+    
 }
 
 .table-feature-item h3 {
@@ -429,13 +430,23 @@ figure {
     background: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1001;
     padding: 15px;
     width: 244px;
     text-align: left;
     border-radius: 22px;
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
-
+.modal.show {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+  
+  
+}
 .modal img {
     width: 50px;
     height: 50px;
@@ -458,16 +469,21 @@ figure {
     color: #333;
 }
 
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+.overlay {
+  position: fixed;
+  inset: 0; /* аналог top: 0; right: 0; bottom: 0; left: 0 */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.9s ease;
 }
+
+.overlay.show {
+  display: block;
+  opacity: 1;
+}
+
 .icon {
   display: inline-block;
   width: 50px;
