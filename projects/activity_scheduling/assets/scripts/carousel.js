@@ -1,10 +1,12 @@
+//------------Start the first carusel------------------
+
 const track = document.querySelector('.carousel-track');
 let isDown = false;
 let startX;
 let scrollLeft;
 
 track.addEventListener('mousedown', (e) => {
-    if (e.button !== 0) return; // Ліва кнопка миші
+    if (e.button !== 0) return;
     isDown = true;
     track.style.cursor = 'grabbing';
     startX = e.pageX - track.offsetLeft;
@@ -20,11 +22,11 @@ document.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - track.offsetLeft;
-    const walk = (x - startX) * 1; // Швидкість прокрутки
+    const walk = (x - startX) * 1; 
     track.scrollLeft = scrollLeft - walk;
 });
 
-
+//------------Start the second carusel------------------
 
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".custom-carousel-track");
@@ -36,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let index = 0;
     const totalItems = items.length;
-    const itemWidth = items[0].offsetWidth + 20; // 320px + 20px (gap)
+    const itemWidth = items[0].offsetWidth + 20;
     let maxIndex = Math.max(0, Math.ceil((totalItems * itemWidth - carouselContainer.offsetWidth) / itemWidth));
 
     function updateCarousel() {
         let translateX = index * itemWidth;
         const maxTranslateX = totalItems * itemWidth - carouselContainer.offsetWidth;
         if (translateX > maxTranslateX) {
-            translateX = maxTranslateX; // Обмежуємо зміщення
+            translateX = maxTranslateX; 
         }
         track.style.transform = `translateX(-${translateX}px)`;
         counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(totalItems).padStart(2, '0')}`;
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCarousel();
     });
 
-    // Оновлення maxIndex при зміні розміру вікна
+    
     window.addEventListener("resize", () => {
         const newContainerWidth = carouselContainer.offsetWidth;
         maxIndex = Math.max(0, Math.ceil((totalItems * itemWidth - newContainerWidth) / itemWidth));
@@ -76,36 +78,36 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
 });
 
-
+//-------------Language Switcher-----------
 
 document.addEventListener('DOMContentLoaded', function() {
   const languageButton = document.getElementById('languageButton');
   const languageDropdown = document.getElementById('languageDropdown');
   const currentLanguageSpan = document.getElementById('currentLanguage');
 
-  // Функція для перемикання видимості випадаючого списку
+  
   function toggleDropdown() {
     languageDropdown.classList.toggle('show');
-    languageButton.classList.toggle('active'); // Додаємо/видаляємо клас для повороту шеврона
+    languageButton.classList.toggle('active');
   }
 
-  // Обробник кліку на кнопку
+  
   languageButton.addEventListener('click', function(event) {
-    event.stopPropagation(); // Запобігаємо закриттю списку при кліку на саму кнопку
+    event.stopPropagation(); 
     toggleDropdown();
   });
 
-  // Обробник кліку на елементи списку
+  
   languageDropdown.querySelectorAll('a').forEach(item => {
     item.addEventListener('click', function(event) {
-      event.preventDefault(); // Запобігаємо переходу за посиланням
-      const selectedLanguage = this.dataset.lang; // Отримуємо назву мови з data-lang
-      currentLanguageSpan.textContent = selectedLanguage; // Змінюємо текст на кнопці
-      toggleDropdown(); // Закриваємо список
+      event.preventDefault();
+      const selectedLanguage = this.dataset.lang;
+      currentLanguageSpan.textContent = selectedLanguage; 
+      toggleDropdown(); 
     });
   });
 
-  // Обробник кліку поза межами списку для його закриття
+  
   document.addEventListener('click', function(event) {
     if (!languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
       if (languageDropdown.classList.contains('show')) {
@@ -113,4 +115,39 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+});
+
+
+//-------------Modal Windows--------------------
+
+function openModal(modalId) {
+    closeAllModals();
+    const modal = document.getElementById(modalId);
+    const parent = modal.parentElement;
+    const rect = parent.getBoundingClientRect();
+    modal.style.display = 'block';
+    modal.style.top = `${rect.bottom + window.scrollY - 130}px`;
+    modal.style.left = `${rect.left + window.scrollX}px`;
+    document.getElementById('modalOverlay').style.display = 'block';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.getElementById('modalOverlay').style.display = 'none';
+}
+
+function closeAllModals() {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => modal.style.display = 'none');
+    document.getElementById('modalOverlay').style.display = 'none';
+}
+
+window.addEventListener('resize', () => {
+    const openModal = document.querySelector('.modal[style*="block"]');
+    if (openModal) {
+        const parent = openModal.parentElement;
+        const rect = parent.getBoundingClientRect();
+        openModal.style.top = `${rect.bottom + window.scrollY}px`;
+        openModal.style.left = `${rect.left + window.scrollX}px`;
+    }
 });

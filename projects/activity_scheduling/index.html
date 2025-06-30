@@ -18,7 +18,7 @@
     <div class="header">
         <div class="header-menu">
             <div class="hide-item header-menu-img">
-                <a href="#" class="hide-item ">
+                <a href="#" class="hide-ite">
                     <img src="assets/img/logo.png" alt="Acuity Scheduling Logo">
                 </a>
             </div>
@@ -171,72 +171,79 @@
     </section>
     <section class="table-feature d-flex-row content-wrap-p">
         <div class="table-feature-item">
-            <h3>
-                01
-            </h3>
-            <p>Manage everything <br /> <span>sync calendars, control staff permissions, and work on the go with our
-                    mobile app.</span></p>
-
+            <h3>01</h3>
+            <p onclick="openModal('modal1')">Manage everything <br /> <span>sync calendars, control staff permissions, and work on the go with our mobile app.</span></p>
+            <div id="modal1" class="modal">
+                <span class="close" onclick="closeModal('modal1')">×</span>
+                <span class="icon manage"></span>
+                <p>Sync calendars and manage staff permissions easily.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                02
-            </h3>
-            <p>Accept online payments <br /> <span>using trusted payment processors, invoices, and multiple payment
-                    options like tips and deposits.</span></p>
-
+            <h3>02</h3>
+            <p onclick="openModal('modal2')">Accept online payments <br /> <span>using trusted payment processors, invoices, and multiple payment options like tips and deposits.</span></p>
+            <div id="modal2" class="modal">
+                <span class="close" onclick="closeModal('modal2')">×</span>
+                <span class="icon payment"></span>
+                <p>Secure payments with trusted processors and invoices.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                03
-            </h3>
-            <p>Increase revenue <br /> <span>with gift certificates, packages, memberships, or group classes. Upsell
-                    with add-ons.</span></p>
-
+            <h3>03</h3>
+            <p onclick="openModal('modal3')">Increase revenue <br /> <span>with gift certificates, packages, memberships, or group classes. Upsell with add-ons.</span></p>
+            <div id="modal3" class="modal">
+                <span class="close" onclick="closeModal('modal3')">×</span>
+                <span class="icon revenue"></span>
+                <p>Boost income with memberships and gift certificates.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                04
-            </h3>
-            <p>Feel confident<br /> <span>knowing client information is private with built-in HIPAA compliance.</span>
-            </p>
-
+            <h3>04</h3>
+            <p onclick="openModal('modal4')">Feel confident<br /> <span>knowing client information is private with built-in HIPAA compliance.</span></p>
+            <div id="modal4" class="modal">
+                <span class="close" onclick="closeModal('modal4')">×</span>
+                <span class="icon security"></span>
+                <p>Ensure privacy with HIPAA-compliant data protection.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                05
-            </h3>
-            <p>Reduce no-shows<br /> <span>by sending automated email or SMS notifications and vaulting credit cards to
-                    enforce late fees.</span></p>
-
+            <h3>05</h3>
+            <p onclick="openModal('modal5')">Reduce no-shows<br /> <span>by sending automated email or SMS notifications and vaulting credit cards to enforce late fees.</span></p>
+            <div id="modal5" class="modal">
+                <span class="close" onclick="closeModal('modal5')">×</span>
+                <span class="icon notification"></span>
+                <p>Minimize no-shows with automated SMS reminders.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                06
-            </h3>
-            <p>Impress clients<br /> <span>by offering virtual appointments. Send personalized intake forms and store
-                    client details.</span></p>
-
+            <h3>06</h3>
+            <p onclick="openModal('modal6')">Impress clients<br /> <span>by offering virtual appointments. Send personalized intake forms and store client details.</span></p>
+            <div id="modal6" class="modal">
+                <span class="close" onclick="closeModal('modal6')">×</span>
+                <span class="icon virtual"></span>
+                <p>Offer virtual appointments and personalized forms.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                07
-            </h3>
-            <p>Get booked <br /> <span>through social media, email, or your website. Build a beautiful web presence with
-                    Squarespace.</span></p>
-
+            <h3>07</h3>
+            <p onclick="openModal('modal7')">Get booked <br /> <span>through social media, email, or your website. Build a beautiful web presence with Squarespace.</span></p>
+            <div id="modal7" class="modal">
+                <span class="close" onclick="closeModal('modal7')">×</span>
+                <span class="icon booking"></span>
+                <p>Get bookings via social media and Squarespace sites.</p>
+            </div>
         </div>
         <div class="table-feature-item">
-            <h3>
-                08
-            </h3>
-            <p>Customize everything <br /> <span>to match your brand experience and limit how and when clients
-                    book.</span></p>
-
+            <h3>08</h3>
+            <p onclick="openModal('modal8')">Customize everything <br /> <span>to match your brand experience and limit how and when clients book.</span></p>
+            <div id="modal8" class="modal">
+                <span class="close" onclick="closeModal('modal8')">×</span>
+                <span class="icon branding"></span>
+                <p>Customize bookings to match your brand experience.</p>
+            </div>
         </div>
-
-
     </section>
+    <div class="modal-overlay" id="modalOverlay" onclick="closeAllModals()"></div>
     <section class="third-party-apps-wrapper content-wrap-p">
         <div class="third-party-apps content-wrap-p">
             <div class="third-party-apps-text">

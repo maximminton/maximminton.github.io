@@ -396,7 +396,6 @@ figure {
     column-gap: 35px;
     justify-content: center;
     margin-top: 64px;
-    font: 'Avenir Next', sans-serif;
 }
 
 .table-feature-item {
@@ -424,6 +423,85 @@ figure {
 .table-feature-item span {
     color: #6F6F6F;
 }
+.modal {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 15px;
+    width: 244px;
+    text-align: left;
+    border-radius: 22px;
+}
+
+.modal img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+}
+
+.modal .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/modal_sprite.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.manage {
+  background-position: 0 0;
+}
+.payment {
+  background-position: -60px -5px;
+}
+.revenue {
+  background-position: -130px -5px;
+}
+.security {
+  background-position: -255px 0px;
+}
+.notification {
+  background-position: -310px 0px;
+}
+.virtual {
+  background-position: -195px 0px;
+}
+.booking {
+  background-position: -424px -5px;
+}
+.branding {
+  background-position: -370px -5px;
+}
+
 
 .third-party-apps-wrapper, .third-party-apps {
     width: 100%;
