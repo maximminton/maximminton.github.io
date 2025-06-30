@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function positionModal(modal) {
   const parent = modal.parentElement;
   const rect = parent.getBoundingClientRect();
-  modal.style.top = `${rect.bottom + window.scrollY - 130}px`; // підняти на 130px
+  modal.style.top = `${rect.bottom + window.scrollY - 130}px`;
   modal.style.left = `${rect.left + window.scrollX}px`;
 }
 
@@ -132,14 +132,11 @@ function openModal(modalId) {
   closeAllModals();
   const modal = document.getElementById(modalId);
   const overlay = document.getElementById('modalOverlay');
-
   modal.classList.remove('show');
   modal.style.display = 'block';
   overlay.style.display = 'block';
-
-  positionModal(modal); // викликаємо окрему функцію для позиціювання
-
-  void modal.offsetWidth; // перезапуск transition
+  positionModal(modal);
+  void modal.offsetWidth;
   modal.classList.add('show');
   overlay.classList.add('show');
 }
@@ -149,19 +146,13 @@ function closeModal(id) {
   const modal = document.getElementById(id);
   const overlay = document.getElementById('modalOverlay');
   if (!modal || !overlay) return;
-
-  // Запускаємо анімацію зникнення
   modal.classList.remove('show');
   overlay.classList.remove('show');
-
-  // Чекаємо 300 мс — це тривалість transition
   setTimeout(() => {
     modal.style.display = 'none';
     overlay.style.display = 'none';
   }, 900);
 }
-
-
 
 
 function closeAllModals() {
@@ -172,17 +163,7 @@ function closeAllModals() {
 function closeOpenModal() {
   const openModal = document.querySelector('.modal.show');
   if (openModal) {
-    closeModal(openModal.id); // викликає вже анімовану функцію
+    closeModal(openModal.id);
   }
 }
-
-
-// window.addEventListener('resize', () => {
-//   const openModal = document.querySelector('.modal[style*="block"]');
-//   if (openModal) {
-//     const parent = openModal.parentElement;
-//     const rect = parent.getBoundingClientRect();
-//     openModal.style.top = `${rect.bottom + window.scrollY - 130}px`;
-//     openModal.style.left = `${rect.left + window.scrollX}px`;
-//   }
 

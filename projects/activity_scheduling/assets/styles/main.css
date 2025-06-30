@@ -402,7 +402,13 @@ figure {
     width: 244px;
     height: 165px;
     margin-bottom: 20px;
-    
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-feature-item:hover {
+    transform: scale(1.14);
+    border-radius: 22px;
 }
 
 .table-feature-item h3 {
@@ -430,7 +436,7 @@ figure {
     background: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1001;
+    z-index: 20;
     padding: 15px;
     width: 244px;
     text-align: left;
@@ -441,25 +447,21 @@ figure {
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
 .modal.show {
-  opacity: 1;
-  transform: scale(1);
-  display: block;
-  
-  
+    opacity: 1;
+    transform: scale(1);
+    display: block;
 }
 .modal img {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
 }
-
 .modal p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 22px;
     margin: 0 0 10px 0;
 }
-
 .modal .close {
     position: absolute;
     top: 5px;
@@ -468,56 +470,51 @@ figure {
     cursor: pointer;
     color: #333;
 }
-
 .overlay {
-  position: fixed;
-  inset: 0; /* аналог top: 0; right: 0; bottom: 0; left: 0 */
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.9s ease;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.9s ease;
 }
-
 .overlay.show {
-  display: block;
-  opacity: 1;
+    display: block;
+    opacity: 1;
 }
-
 .icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-image: url('../img/modal_sprite.png');
-  background-repeat: no-repeat;
-  background-size: auto;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/modal_sprite.png');
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-
 .manage {
-  background-position: 0 0;
+    background-position: 0 0;
 }
 .payment {
-  background-position: -60px -5px;
+    background-position: -60px -5px;
 }
 .revenue {
-  background-position: -130px -5px;
+    background-position: -130px -5px;
 }
 .security {
-  background-position: -255px 0px;
+    background-position: -255px 0px;
 }
 .notification {
-  background-position: -310px 0px;
+    background-position: -310px 0px;
 }
 .virtual {
-  background-position: -195px 0px;
+    background-position: -195px 0px;
 }
 .booking {
-  background-position: -424px -5px;
+    background-position: -424px -5px;
 }
 .branding {
-  background-position: -370px -5px;
+    background-position: -370px -5px;
 }
-
 
 .third-party-apps-wrapper, .third-party-apps {
     width: 100%;
