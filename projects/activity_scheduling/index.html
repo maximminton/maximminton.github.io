@@ -4,9 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="With seamless client scheduling, secure payments, and workflow automation, all you have to do is show up on time.">
+    <link rel="apple-touch-icon" sizes="200x200" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="canonical" href="https://maximminton.github.io/projects/activity_scheduling/">
+    <style>
+      body { margin: 0; font-family: 'Inter', sans-serif; background: #5F93C0; }
+      .header { display: flex; flex-direction: column; align-items: center; width: 100%; min-height: 810px; color: white; }
+      .header-menu { width: 100%; height: 80px; display: flex; align-items: center; justify-content:space-around; }
+      .btn { background-color: #283849; color: white; border-radius: 12px; padding: 12px 24px; text-decoration: none; }
+      .header-message { width: 100%; max-width: 520px; min-height: 350px; display: flex; flex-direction: column; align-items: center; }
+      .carousel { width: 100%; max-width: 1440px; position: relative; }
+    </style>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="acuityscheduling">
+    <meta property="og:description" content="With seamless client scheduling, secure payments, and workflow automation, all you have to do is show up on time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maximminton.github.io/projects/activity_scheduling/">
+    <meta property="og:image" content="https://maximminton.github.io/projects/activity_scheduling/assets/img/logo.png">
+    <meta property="og:site_name" content="acuityscheduling">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@acuityscheduling">
+    <meta name="twitter:creator" content="@acuityscheduling">
+    <meta name="twitter:url" content="https://maximminton.github.io/projects/activity_scheduling/">
+    <meta name="twitter:title" content="acuityscheduling">
+    <meta name="twitter:description" content="With seamless client scheduling, secure payments, and workflow automation, all you have to do is show up on time.">
+    <meta name="twitter:image" content="https://maximminton.github.io/projects/activity_scheduling/assets/img/logo.png">
     <title>acuityscheduling</title>
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -18,7 +46,10 @@
     <header class="header">
         <nav class="header-menu">
             <a href="#" class="header-menu-img hide-item">
-                <img src="assets/img/logo.png" alt="Acuity Scheduling Logo">
+                <picture>
+                    <source srcset="assets/img/logo.webp" type="image/webp">
+                    <img src="assets/img/logo.png" alt="Acuity Scheduling Logo" loading="lazy">
+                </picture>
             </a>
             <a href="#" class="header-menu-item hide-item">Pricing</a>
             <a href="#" class="header-menu-item hide-desktop" aria-label="Pricing">
@@ -43,11 +74,46 @@
         </div>
         <div class="carousel">
             <div class="carousel-track">
-                <img src="assets/img/img1.png" alt="Image 1">
-                <img src="assets/img/img2.png" alt="Image 2">
-                <img src="assets/img/img3.png" alt="Image 3">
-                <img src="assets/img/img4.png" alt="Image 4">
-                <img src="assets/img/img5.png" alt="Image 5">
+                <picture>
+                    <source srcset="assets/img/img1.webp" type="image/webp">
+                    <img src="assets/img/img1.png" alt="Image 1" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img2.webp" type="image/webp">
+                    <img src="assets/img/img2.png" alt="Image 2" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img3.webp" type="image/webp">
+                    <img src="assets/img/img3.png" alt="Image 3" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img4.webp" type="image/webp">
+                    <img src="assets/img/img4.png" alt="Image 4" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img5.webp" type="image/webp">
+                    <img src="assets/img/img5.png" alt="Image 5" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img1.webp" type="image/webp">
+                    <img src="assets/img/img1.png" alt="Image 1" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img2.webp" type="image/webp">
+                    <img src="assets/img/img2.png" alt="Image 2" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img3.webp" type="image/webp">
+                    <img src="assets/img/img3.png" alt="Image 3" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img4.webp" type="image/webp">
+                    <img src="assets/img/img4.png" alt="Image 4" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="assets/img/img5.webp" type="image/webp">
+                    <img src="assets/img/img5.png" alt="Image 5" loading="lazy">
+                </picture>
             </div>
         </div>
         <div class="play-btn-wrap">
@@ -67,7 +133,10 @@
                             book with you, host virtual appointments or classes, and block off personal time.</p>
                     </div>
                     <div class="tile-img object-center">
-                        <img src="assets/img/tiles1.png" alt="Feature: Control your availability">
+                        <picture>
+                            <source srcset="assets/img/tiles1.webp" type="image/webp">
+                            <img src="assets/img/tiles1.png" alt="Feature: Control your availability" loading="lazy">
+                        </picture>
                     </div>
                 </div>
                 <div class="tile d-flex-row book">
@@ -78,7 +147,10 @@
                             scheduling process to keep clients prompt.</p>
                     </div>
                     <div class="tile-img object-center">
-                        <img src="assets/img/tiles2.png" alt="Feature: Automated booking">
+                        <picture>
+                            <source srcset="assets/img/tiles2.webp" type="image/webp">
+                            <img src="assets/img/tiles2.png" alt="Feature: Automated booking" loading="lazy">
+                        </picture>
                     </div>
                 </div>
                 <div class="tile d-flex-row book">
@@ -88,7 +160,10 @@
                             loyalty tools to drive business growth and keep customers coming back.</p>
                     </div>
                     <div class="tile-img object-center">
-                        <img src="assets/img/tiles3.png" alt="Feature: Customer engagement">
+                        <picture>
+                            <source srcset="assets/img/tiles3.webp" type="image/webp">
+                            <img src="assets/img/tiles3.png" alt="Feature: Customer engagement" loading="lazy">
+                        </picture>
                     </div>
                 </div>
                 <div class="tile d-flex-row landscape">
@@ -98,7 +173,10 @@
                             Seamlessly offer recurring subscriptions, packages, and gift cards to up your earnings.</p>
                     </div>
                     <div class="tile-img object-center">
-                        <img src="assets/img/tiles4.png" alt="Feature: Maximize income">
+                        <picture>
+                            <source srcset="assets/img/tiles4.webp" type="image/webp">
+                            <img src="assets/img/tiles4.png" alt="Feature: Maximize income" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -108,7 +186,10 @@
             <p>Get a branded scheduling page that showcases your services and real-time availability. With easy payment and
                 intake forms, your scheduler is everything your clients need to self-schedule appointments.</p>
             <figure class="object-center">
-                <img src="assets/img/booking.png" alt="Automated Booking">
+                <picture>
+                    <source srcset="assets/img/booking.webp" type="image/webp">
+                    <img src="assets/img/booking.png" alt="Automated Booking" loading="lazy">
+                </picture>
             </figure>
         </section>
         <section class="row-feature d-flex content-wrap-p">
@@ -124,39 +205,66 @@
                 <button class="carousel-next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
                 <div class="custom-carousel-track">
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img6.png" alt="Education and Tutoring">
+                        <picture>
+                            <source srcset="assets/img/img6.webp" type="image/webp">
+                            <img src="assets/img/img6.png" alt="Education and Tutoring" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Education and Tutoring</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img6.png" alt="Education and Tutoring">
+                        <picture>
+                            <source srcset="assets/img/img6.webp" type="image/webp">
+                            <img src="assets/img/img6.png" alt="Education and Tutoring" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Education and Tutoring</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img6.png" alt="Education and Tutoring">
+                        <picture>
+                            <source srcset="assets/img/img6.webp" type="image/webp">
+                            <img src="assets/img/img6.png" alt="Education and Tutoring" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Education and Tutoring</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img7.png" alt="Financial, Public and Legal Services">
+                        <picture>
+                            <source srcset="assets/img/img7.webp" type="image/webp">
+                            <img src="assets/img/img7.png" alt="Financial, Public and Legal Services" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Financial, Public and Legal Services</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img8.png" alt="Pet Care and Grooming">
+                        <picture>
+                            <source srcset="assets/img/img8.webp" type="image/webp">
+                            <img src="assets/img/img8.png" alt="Pet Care and Grooming" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Pet Care and Grooming</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img1.png" alt="Automotive and Maintenance">
+                        <picture>
+                            <source srcset="assets/img/img1.webp" type="image/webp">
+                            <img src="assets/img/img1.png" alt="Automotive and Maintenance" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Automotive and Maintenance</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img2.png" alt="Automotive and Maintenance">
+                        <picture>
+                            <source srcset="assets/img/img2.webp" type="image/webp">
+                            <img src="assets/img/img2.png" alt="Automotive and Maintenance" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Automotive and Maintenance</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img3.png" alt="Automotive and Maintenance">
+                        <picture>
+                            <source srcset="assets/img/img3.webp" type="image/webp">
+                            <img src="assets/img/img3.png" alt="Automotive and Maintenance" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Automotive and Maintenance</div>
                     </div>
                     <div class="custom-carousel-item">
-                        <img src="assets/img/img4.png" alt="Automotive and Maintenance">
+                        <picture>
+                            <source srcset="assets/img/img4.webp" type="image/webp">
+                            <img src="assets/img/img4.png" alt="Automotive and Maintenance" loading="lazy">
+                        </picture>
                         <div class="carousel-caption">Automotive and Maintenance</div>
                     </div>
                 </div>
@@ -191,7 +299,10 @@
                     <a href="#">Blog</a>
                 </div>
                 <div class="support-img">
-                    <img src="assets/img/support-img.png" alt="Support">
+                    <picture>
+                        <source srcset="assets/img/support-img.webp" type="image/webp">
+                        <img src="assets/img/support-img.png" alt="Support" loading="lazy">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -210,7 +321,10 @@
                     <a href="#" data-lang="Français">Français</a>
                 </div>
             </div>
-            <img src="assets/img/acuity-logo-footer-black.svg" alt="Acuity Scheduling footer logo">
+            <picture>
+                <source srcset="assets/img/acuity-logo-footer-black.svg" type="image/webp">
+                <img src="assets/img/acuity-logo-footer-black.svg" alt="Acuity Scheduling footer logo" loading="lazy">
+            </picture>
         </div>
         <div class="footer-content">
             <div class="footer-column">
