@@ -278,7 +278,7 @@ img {
 }
 
 .automated-booking {
-    max-width: 928px;
+    max-width: 1441px;
     max-height: 1032px;
     color: #000000;
 }
@@ -334,6 +334,12 @@ figure {
 }
 
 /* -----------/ Second Carousel Styles /-------- */
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .custom-carousel {
     position: relative;
     width: 100vw;
