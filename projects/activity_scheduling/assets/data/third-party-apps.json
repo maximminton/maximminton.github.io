@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Stripe",
+    "img": "assets/img/logo-stripe.svg",
+    "alt": "Stripe logo"
+  },
+  {
+    "name": "Square",
+    "img": "assets/img/logo-square.svg",
+    "alt": "Square logo"
+  },
+  {
+    "name": "Zapier",
+    "img": "assets/img/logo-zapier.svg",
+    "alt": "Zapier logo"
+  },
+  {
+    "name": "PayPal",
+    "img": "assets/img/Mask-group.svg",
+    "alt": "PayPal logo"
+  },
+  {
+    "name": "GA",
+    "img": "assets/img/logo-ga.svg",
+    "alt": "GA logo"
+  },
+  {
+    "name": "GA",
+    "img": "assets/img/logo-ga.svg",
+    "alt": "GA logo"
+  }
+] 

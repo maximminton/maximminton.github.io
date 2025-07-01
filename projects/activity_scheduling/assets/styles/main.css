@@ -563,13 +563,15 @@ button{
 
 .support {
     width: 100%;
-    max-width: 464px;
+    max-width: 1464px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .support-container {
     width: 100%;
+    max-width: 464px;
     margin-top: 40px;
     border-radius: 22px;
     padding: 15px;
@@ -746,6 +748,22 @@ button{
     margin-bottom: 14px;
 }
 
+.scroll-to-top-btn{
+    display:none;
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    z-index:1000;
+    padding:12px 16px;
+    border:none;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+    font-size:22px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:opacity 0.3s;
+}
 /* -------Mobile View-------------- */
 @media all and (min-width: 600px) {
     .header-menu {
@@ -810,6 +828,10 @@ button{
     }
 }
 @media all and (min-width: 1024px) {
+    .support-container {
+        max-width: 1464px;
+        
+    }
     .support-img img {
         margin-right: 40px;
     }
@@ -828,9 +850,11 @@ button{
 }
 @media all and (min-width: 1280px) {
     .support-container {
+        max-width: 1464px;
         padding-left: 129px;
         justify-content: space-between;
     }
+   
     .landscape {
         max-width: 1441px;
     }

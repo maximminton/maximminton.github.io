@@ -168,113 +168,14 @@
                 <p>A cohesive, user-friendly scheduling software made to support you every step of the way.</p>
             </div>
         </section>
-        <section class="table-feature d-flex-row content-wrap-p">
-            <div class="table-feature-item" onclick="openModal('modal1')" style="position:relative;">
-                <h3>01</h3>
-                <p>Manage everything <br> <span>sync calendars, control staff permissions, and work on the go with our mobile app.</span></p>
-                <div id="modal1" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal1')">×</span>
-                    <span class="icon manage"></span>
-                    <p>Sync calendars and manage staff permissions easily.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal2')" style="position:relative;">
-                <h3>02</h3>
-                <p>Accept online payments <br> <span>using trusted payment processors, invoices, and multiple payment options like tips and deposits.</span></p>
-                <div id="modal2" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal2')">×</span>
-                    <span class="icon payment"></span>
-                    <p>Secure payments with trusted processors and invoices.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal3')" style="position:relative;">
-                <h3>03</h3>
-                <p>Increase revenue <br> <span>with gift certificates, packages, memberships, or group classes. Upsell with add-ons.</span></p>
-                <div id="modal3" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal3')">×</span>
-                    <span class="icon revenue"></span>
-                    <p>Boost income with memberships and gift certificates.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal4')" style="position:relative;">
-                <h3>04</h3>
-                <p>Feel confident<br> <span>knowing client information is private with built-in HIPAA compliance.</span></p>
-                <div id="modal4" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal4')">×</span>
-                    <span class="icon security"></span>
-                    <p>Ensure privacy with HIPAA-compliant data protection.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal5')" style="position:relative;">
-                <h3>05</h3>
-                <p>Reduce no-shows<br> <span>by sending automated email or SMS notifications and vaulting credit cards to enforce late fees.</span></p>
-                <div id="modal5" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal5')">×</span>
-                    <span class="icon notification"></span>
-                    <p>Minimize no-shows with automated SMS reminders.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal6')" style="position:relative;">
-                <h3>06</h3>
-                <p>Impress clients<br> <span>by offering virtual appointments. Send personalized intake forms and store client details.</span></p>
-                <div id="modal6" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal6')">×</span>
-                    <span class="icon virtual"></span>
-                    <p>Offer virtual appointments and personalized forms.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal7')" style="position:relative;">
-                <h3>07</h3>
-                <p>Get booked <br> <span>through social media, email, or your website. Build a beautiful web presence with Squarespace.</span></p>
-                <div id="modal7" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal7')">×</span>
-                    <span class="icon booking"></span>
-                    <p>Get bookings via social media and Squarespace sites.</p>
-                </div>
-            </div>
-            <div class="table-feature-item" onclick="openModal('modal8')" style="position:relative;">
-                <h3>08</h3>
-                <p>Customize everything <br> <span>to match your brand experience and limit how and when clients book.</span></p>
-                <div id="modal8" class="modal" style="position:absolute; top:100%; left:0;">
-                    <span class="close" onclick="closeModal('modal8')">×</span>
-                    <span class="icon branding"></span>
-                    <p>Customize bookings to match your brand experience.</p>
-                </div>
-            </div>
-        </section>
+        <section id="table-feature-section" class="table-feature d-flex-row content-wrap-p"></section>
         <div id="modalOverlay" class="overlay" onclick="closeOpenModal()"></div>
         <section class="third-party-apps-wrapper content-wrap-p">
             <div class="third-party-apps content-wrap-p">
                 <div class="third-party-apps-text">
                     <p>Integrate with powerful third-party apps.</p>
                 </div>
-                <div class="third-party-apps-icons object-center">
-                    <div class="icons-item d-flex stripe">
-                        <a href="#" aria-label="Stripe">
-                            <img src="assets/img/logo-stripe.svg" alt="Stripe logo">
-                        </a>
-                    </div>
-                    <div class="icons-item d-flex square">
-                        <a href="#" aria-label="Square">
-                            <img src="assets/img/logo-square.svg" alt="Square logo">
-                        </a>
-                    </div>
-                    <div class="icons-item d-flex zapier">
-                        <a href="#" aria-label="Zapier">
-                            <img src="assets/img/logo-zapier.svg" alt="Zapier logo">
-                        </a>
-                    </div>
-                    <div class="icons-item d-flex paypal">
-                        <a href="#" aria-label="PayPal">
-                            <img src="assets/img/Mask-group.svg" alt="PayPal logo">
-                        </a>
-                    </div>
-                    <div class="icons-item d-flex ga">
-                        <a href="#" aria-label="Google Analytics">
-                            <img src="assets/img/logo-ga.svg" alt="Google Analytics logo">
-                        </a>
-                    </div>
-                </div>
+                <div id="third-party-apps-icons" class="third-party-apps-icons object-center"></div>
             </div>
         </section>
         <section class="support d-flex content-wrap-p">
@@ -349,7 +250,12 @@
             </div>
         </div>
     </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Вгору" >
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script src="assets/scripts/carousel.js"></script>
+    <script src="assets/scripts/dynamic-content.js"></script>
+    <script src="assets/scripts/scroll-to-top.js"></script>
 </body>
 
 </html>

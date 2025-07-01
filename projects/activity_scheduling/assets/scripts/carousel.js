@@ -141,6 +141,16 @@
         window.closeModal(openModal.id);
       }
     }
+
+    document.querySelectorAll('.modal .close').forEach(function(closeBtn) {
+      closeBtn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        const modal = closeBtn.closest('.modal');
+        if (modal) {
+          window.closeModal(modal.id);
+        }
+      });
+    });
   });
 })();
 
