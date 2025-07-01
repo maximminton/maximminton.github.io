@@ -102,53 +102,45 @@
     }
 
     //-------------Modal Windows--------------------
-    function positionModal(modal) {
-      const parent = modal.parentElement;
-      const rect = parent.getBoundingClientRect();
-      modal.style.top = `${rect.bottom + window.scrollY - 130}px`;
-      modal.style.left = `${rect.left + window.scrollX}px`;
-    }
-    function closeAllModals() {
-      document.querySelectorAll('.modal').forEach(modal => {
-        modal.style.display = 'none';
-        modal.classList.remove('show');
-      });
-      const overlay = document.getElementById('modalOverlay');
-      if (overlay) {
-        overlay.style.display = 'none';
-        overlay.classList.remove('show');
-      }
-    }
     window.openModal = function(modalId) {
-      closeAllModals();
+      window.closeAllModals();
       const modal = document.getElementById(modalId);
       const overlay = document.getElementById('modalOverlay');
       if (!modal || !overlay) return;
-      modal.classList.remove('show');
-      modal.style.display = 'block';
-      overlay.style.display = 'block';
-      positionModal(modal);
-      void modal.offsetWidth;
       modal.classList.add('show');
       overlay.classList.add('show');
-    };
+      if (modal.parentElement) {
+        modal.parentElement.classList.add('modal-open');
+      }
+    }
+
     window.closeModal = function(id) {
       const modal = document.getElementById(id);
       const overlay = document.getElementById('modalOverlay');
       if (!modal || !overlay) return;
       modal.classList.remove('show');
       overlay.classList.remove('show');
-      setTimeout(() => {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-      }, 900);
-    };
+      if (modal.parentElement) {
+        modal.parentElement.classList.remove('modal-open');
+      }
+    }
+
+    window.closeAllModals = function() {
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.classList.remove('show');
+      });
+      const overlay = document.getElementById('modalOverlay');
+      if (overlay) {
+        overlay.classList.remove('show');
+      }
+    }
+
     window.closeOpenModal = function() {
       const openModal = document.querySelector('.modal.show');
       if (openModal) {
         window.closeModal(openModal.id);
       }
-    };
+    }
   });
 })();
 

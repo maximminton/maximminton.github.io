@@ -410,6 +410,7 @@ button{
     margin-bottom: 20px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .table-feature-item:hover {
@@ -437,25 +438,25 @@ button{
     color: #6F6F6F;
 }
 .modal {
-    display: none;
     position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 20;
-    padding: 15px;
-    width: 244px;
-    text-align: left;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
     border-radius: 22px;
+    z-index: 1001;
     opacity: 0;
-    transform: scale(0.95);
     pointer-events: none;
-    transition: opacity 0.9s ease, transform 0.9s ease;
+    background: #fff;
+    transform: translateY(0);
+    transition: top 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s, transform 0.5s cubic-bezier(.4,2,.6,1);
 }
 .modal.show {
+    top: 50%;
     opacity: 1;
-    transform: scale(1);
-    display: block;
+    pointer-events: auto;
+    transform: translateY(-50%);
 }
 .modal img {
     width: 50px;
@@ -480,7 +481,7 @@ button{
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    z-index: 1000;
     display: none;
     opacity: 0;
     transition: opacity 0.9s ease;
@@ -497,30 +498,14 @@ button{
     background-repeat: no-repeat;
     background-size: auto;
 }
-.manage {
-    background-position: 0 0;
-}
-.payment {
-    background-position: -60px -5px;
-}
-.revenue {
-    background-position: -130px -5px;
-}
-.security {
-    background-position: -255px 0px;
-}
-.notification {
-    background-position: -310px 0px;
-}
-.virtual {
-    background-position: -195px 0px;
-}
-.booking {
-    background-position: -424px -5px;
-}
-.branding {
-    background-position: -370px -5px;
-}
+.manage {background-position: 0 0;}
+.payment {background-position: -60px -5px;}
+.revenue {background-position: -130px -5px;}
+.security {background-position: -255px 0px;}
+.notification {background-position: -310px 0px;}
+.virtual {background-position: -195px 0px;}
+.booking {background-position: -424px -5px;}
+.branding {background-position: -370px -5px;}
 
 .third-party-apps-wrapper, .third-party-apps {
     width: 100%;
@@ -886,4 +871,10 @@ button{
         max-width: 580px;
         padding-right: 190px;
     }
+}
+
+.table-feature-item.modal-open:hover {
+  transform: none;
+  box-shadow: none;
+  cursor: default;
 }
