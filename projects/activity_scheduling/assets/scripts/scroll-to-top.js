@@ -1,4 +1,4 @@
-// Показ/приховування кнопки "Вгору"
+
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {

@@ -46,10 +46,10 @@ fetch('assets/data/third-party-apps.json')
     }
     const visibleData = data.slice(0, LIMIT);
     iconsDiv.innerHTML = visibleData.map(app => `
-      <div class="icons-item d-flex ${app.name.toLowerCase()}">
-        <a href="#" aria-label="${app.name}">
+      <a href="#" aria-label="${app.name}" style="text-decoration:none; color:inherit;">
+        <div class="icons-item d-flex ${app.name.toLowerCase()}">
           <img src="${app.img}" alt="${app.alt}">
-        </a>
-      </div>
+        </div>
+      </a>
     `).join('');
   }); 

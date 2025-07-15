@@ -39,7 +39,9 @@ img {
 	display: flex;
 	flex-direction: row;
 }
-
+.a_items-center {
+    align-items: center;
+}
 .object-center {
 	display: flex;
 	align-items: center;
@@ -84,7 +86,7 @@ img {
 
 .header-menu-img {
 	width: 100%;
-	height: 26px;
+	height: 37px;
 	align-items: center;
 	color: #1E1E1E;
 }
@@ -468,10 +470,23 @@ button {
 .table-feature-item p {
 	padding-top: 26px;
 	padding-right: 28px;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 115px;
 }
 
 .table-feature-item span {
 	color: #6F6F6F;
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 66px;
 }
 
 .modal {
@@ -482,7 +497,7 @@ button {
 	height: 100%;
 	padding: 10px;
 	border-radius: 22px;
-	z-index: 1001;
+	z-index: 11;
 	opacity: 0;
 	pointer-events: none;
 	background: #fff;
@@ -508,22 +523,34 @@ button {
 	font-weight: 400;
 	line-height: 22px;
 	margin: 0 0 10px 0;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 68px;
 }
 
 .modal .close {
 	position: absolute;
 	top: 5px;
 	right: 10px;
-	font-size: 20px;
+    padding: 15px;
+	font-size: 40px;
 	cursor: pointer;
 	color: #333;
-}
+    }
+.modal .close:hover{
+	transform: rotate(90deg);
+    transition: transform 1s ease;
+    }
+
 
 .overlay {
 	position: fixed;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.5);
-	z-index: 1000;
+	z-index: 10;
 	display: none;
 	opacity: 0;
 	transition: opacity 0.9s ease;
@@ -618,6 +645,11 @@ button {
 	border-radius: 100px;
 	justify-content: center;
 	align-items: center;
+	transition: transform 0.3s;
+}
+
+.icons-item:hover {
+	transform: scale(1.14);
 }
 
 .stripe {
@@ -1012,3 +1044,6 @@ button {
 	box-shadow: none;
 	cursor: default;
 }
+
+
+

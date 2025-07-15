@@ -159,15 +159,15 @@
 			}
 		}
 
-		document.querySelectorAll( '.modal .close' )
-			.forEach( function( closeBtn ) {
-				closeBtn.addEventListener( 'click', function( event ) {
-					event.stopPropagation();
-					const modal = closeBtn.closest( '.modal' );
-					if ( modal ) {
-						window.closeModal( modal.id );
-					}
-				} );
-			} );
+		
+		document.addEventListener('click', function(event) {
+			if (event.target.matches('.modal .close')) {
+				event.stopPropagation();
+				const modal = event.target.closest('.modal');
+				if (modal) {
+					window.closeModal(modal.id);
+				}
+			}
+		});
 	} );
 } )();
